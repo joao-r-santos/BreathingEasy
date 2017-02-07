@@ -1,0 +1,68 @@
+{% extends "base_template.html" %}
+{% block content %}
+  <div class="container">
+
+    <div class="container">
+      <h3>Select a county in California to see the most important factors related to pediatric asthma</h3>
+    </div>
+
+    <div class = "container">
+
+      <form  action="/output" method="GET">
+        <select class="selectpicker" name="county" id="county">
+          <option value="0" selected disabled>County</option>
+          {% for county_name in county_names %}
+              <option value={{ county_name }}> {{ county_name }}</option>
+          {% endfor %}
+        </select> 
+
+        <select class="selectpicker" name="age" id="age">
+          <option value="0" selected disabled>Age</option>
+              <option value="0-4">0-4 years</option>
+              <option value="5-17">5-17 years</option>
+          </select> 
+
+        <select class="selectpicker" name="gender" id="gender">
+          <option value="0" selected disabled>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+          </select> 
+
+        <div>
+          <button type="submit" class="btn btn-default">Analyze</button>
+        </div>
+
+      </form>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    </div><!-- /.container -->
+
+
+  <div class="container">
+    <div class="starter-template">
+      <h3>Results:</h3>
+      <p class="lead">In {{county}} county, for {{gender}} children of {{age}} years, the most important factors for pediatric asthma are:</p>
+    </div>
+
+    <table class="table table-hover">
+      <tr><th>Factor</th><th>Importance</th></tr>
+      <tr><td>AQI LPM2.5</td><td>3.4</td></tr>
+      <tr><td>AQI Traffic pollution</td><td>3.2</td></tr>
+      <tr><td>AQI ozone</td><td>2.9</td></tr>
+      <tr><td>AQI median</td><td>2.5</td></tr>
+      <tr><td>Area burned by wild fires</td><td>2.1</td></tr>
+    </table>
+
+  </div><!-- /.container -->
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+
+  </div><!-- /.container -->
+
+{% endblock %}
