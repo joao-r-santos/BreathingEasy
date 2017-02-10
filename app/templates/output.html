@@ -53,43 +53,73 @@
   <div class="container">
     <div class="starter-template">
       <h3>Results for {{ rates['Gender'] }} {{ rates['Ethnicity'] }} children with {{ rates['Age'] }} years</h3>
-			<p class="lead">According to our model, in {{ rates['County'] }} county the predicted ED visits rate (per 10,000) for pediatric asthma is {{ rates['Rate predict'] | round(2) }}, compared with the actual rate of {{ rates['Rate real'] | round(2) }}.</p>
+			<p class="lead">According to our model, in {{ rates['County'] }} county the predicted ED visit rate (per 10,000) for pediatric asthma is {{ rates['Rate predict'] | round(2) }}, compared with the actual rate of {{ rates['Rate real'] | round(2) }}.</p>
     </div>
   </div><!-- /.container -->
 
-    <br>
     <br>
 
   <div class="container">
     <div class="starter-template">
         <h3>Factors for pediatric asthma</h3>
-        <p class="lead">The most important factors for pediatric asthma are given in the following table.</p>
+<!--
+<p class="lead">The most important factors for pediatric asthma are given in the following table.</p>
+-->
         <p class="lead">
             Each factor is given an impact score.
-            This score reflects the predicted change in ED visits rates for pediatric asthma given a reduction of 10% in the corresponding factor.
-            For example, an impact score of 3 for the factor Traffic pollution corresponds to a predicted reduction by 3 of the ED visits rate, given an initial reduction of the Traffic pollution by 10%.
+            This score reflects the predicted change in ED visit rates for pediatric asthma given a reduction of 10% in the corresponding factor.
+            For example, an impact score of 3 for the factor Traffic pollution corresponds to a predicted reduction by 3 of the ED visit rate, given an initial reduction of the Traffic pollution by 10%.
         </p>
     </div>
+  </div><!-- /.container -->
 
+
+    <br>
+
+  <div class="container">
+    <div class="starter-template">
+        <h3>Comparison to other counties</h3>
+        <p class="lead">
+            For each factor, I present the percentile of the {{rates['County']}} county in relation to all the other counties in California.
+            For example, a percentile of 70% means that 70% of all counties have better values for this factor than {{rates['County']}} county.
+        </p>
+    </div>
+  </div><!-- /.container -->
+
+    <br>
+
+  <div class="container">
     <table class="table table-hover">
-      <tr><th>Factor</th>
-          <th>Percentage Rank</th>
-          <th>Importance Score</th></tr>
-      <tr><td>AQI PM2.5</td>
+        <tr>
+          <th>Factor</th>
+          <th>Impact Score</th>
+          <th>Percentile<br>(lower is better)</th>
+        </tr>
+        <tr>
+          <td>AQI PM2.5</td>
+          <td>{{ impact['PM2.5 AQI'] | round(2) }}</td>
           <td>{{ ranks['PM2.5 AQI'] | round | int }}%</td>
-          <td>{{ impact['PM2.5 AQI'] | round(2) }}</td></tr>
-      <tr><td>Traffic pollution</td>
-          <td>{{ ranks['Traffic pollution'] | round | int }}%</td>
-          <td>{{ impact['Traffic pollution'] | round(2) }}</td></tr>
-      <tr><td>AQI ozone</td>
-          <td>{{ ranks['O3 AQI'] | round | int }}%</td>
-          <td>{{ impact['O3 AQI'] | round(2) }}</td></tr>
-      <tr><td>AQI median</td>
-          <td>{{ ranks['AQI Median'] | round | int }}%</td>
-          <td>{{ impact['AQI Median'] | round(2) }}</td></tr>
-      <tr><td>Area burned by wild fires</td>
-          <td>{{ ranks['Area burned'] | round | int }}%</td>
-          <td>{{ impact['Area burned'] | round(2) }}</td></tr>
+        </tr>
+        <tr>
+            <td>Traffic pollution</td>
+            <td>{{ impact['Traffic pollution'] | round(2) }}</td>
+            <td>{{ ranks['Traffic pollution'] | round | int }}%</td>
+        </tr>
+        <tr>
+            <td>AQI ozone</td>
+            <td>{{ impact['O3 AQI'] | round(2) }}</td>
+            <td>{{ ranks['O3 AQI'] | round | int }}%</td>
+        </tr>
+        <tr>
+            <td>AQI median</td>
+            <td>{{ impact['AQI Median'] | round(2) }}</td>
+            <td>{{ ranks['AQI Median'] | round | int }}%</td>
+        </tr>
+        <tr>
+            <td>Area burned by wild fires</td>
+            <td>{{ impact['Area burned'] | round(2) }}</td>
+            <td>{{ ranks['Area burned'] | round | int }}%</td>
+        </tr>
     </table>
 
   </div><!-- /.container -->
