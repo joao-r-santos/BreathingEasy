@@ -26,7 +26,7 @@ function anyFunction()
 }
 
 $(function () {
-  setInterval(anyFunction, 2000);
+  setInterval(anyFunction, 1000);
 });
 
 </script>

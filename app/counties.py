@@ -1,16 +1,18 @@
-from pickle import load
-from numpy import array
+#from pickle import load
+from numpy import str
+import pandas as pd
 
 def ListCounties():
-  fin = open('app/static/counties.pkl','rb')
-  try:
-    county_names = load(fin)
-  except:
-    print 'Ooops. County Names not found.'
-    county_names= array([],dtype=np.str)
-  return county_names
+	counties= []
+	try:
+		counties_df = pd.read_csv('app/static/county_info.csv', dtype={'FIPS':str})
+		counties= counties_df.to_dict(orient='records')  # get file in format [{'County': 'Alameda', 'FIPS': '06001'}]
+	except:
+		print 'Ooops. Counties not found.'
+		return None
+	return counties
 
 if __name__ == '__main__':
-  county_names= ListCounties()
-  for i in xrange(len(county_names)):
-    print '%2d) %s' % (i+1, county_names[i])
+	counties= ListCounties()
+	for c in counties:
+		print '%s - %s' % (c['FIPS'], c['County'])

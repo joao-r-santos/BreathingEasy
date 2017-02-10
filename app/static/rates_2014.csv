@@ -1,0 +1,483 @@
+County,FIPS,Year,Age,Gender,Ethnicity,Rate real,Rate predict
+Alameda,06001,2014,0-4,female,african,329.94,299.22
+Alameda,06001,2014,0-4,male,african,596.67,618.33
+Alameda,06001,2014,5-17,female,african,223.52,225.08
+Alameda,06001,2014,5-17,male,african,304.49,254.44
+Alameda,06001,2014,0-4,female,asian,39.63,39.2
+Alameda,06001,2014,0-4,male,asian,74.65,116.84
+Alameda,06001,2014,5-17,female,asian,17.94,37.34
+Alameda,06001,2014,5-17,male,asian,31.88,61.16
+Alameda,06001,2014,0-4,female,hispanic,94.97,39.2
+Alameda,06001,2014,0-4,male,hispanic,196.55,116.84
+Alameda,06001,2014,5-17,female,hispanic,70.25,37.34
+Alameda,06001,2014,5-17,male,hispanic,101.44,61.16
+Alameda,06001,2014,0-4,female,other,185.09,197.26
+Alameda,06001,2014,0-4,male,other,422.13,371.86
+Alameda,06001,2014,5-17,female,other,123.04,134.2
+Alameda,06001,2014,5-17,male,other,170.9,181.34
+Alameda,06001,2014,0-4,female,white,37.28,39.2
+Alameda,06001,2014,0-4,male,white,67.38,116.84
+Alameda,06001,2014,5-17,female,white,25.59,37.34
+Alameda,06001,2014,5-17,male,white,39.69,61.16
+Amador,06005,2014,5-17,female,white,107.87,104.31
+Amador,06005,2014,5-17,male,white,87.21,110.67
+Butte,06007,2014,5-17,male,african,479.26,372.28
+Butte,06007,2014,0-4,male,hispanic,160.61,144.91
+Butte,06007,2014,5-17,male,hispanic,49.15,54.74
+Butte,06007,2014,0-4,female,white,70.65,70.07
+Butte,06007,2014,0-4,male,white,133.26,144.91
+Butte,06007,2014,5-17,female,white,63.68,61.21
+Butte,06007,2014,5-17,male,white,58.95,54.74
+Calaveras,06009,2014,0-4,male,white,194.03,211.39
+Calaveras,06009,2014,5-17,female,white,83.13,75.69
+Calaveras,06009,2014,5-17,male,white,86.79,85.56
+Colusa,06011,2014,5-17,male,hispanic,72.76,76.78
+Contra Costa,06013,2014,0-4,female,african,296.63,298.54
+Contra Costa,06013,2014,0-4,male,african,553.77,511.68
+Contra Costa,06013,2014,5-17,female,african,293.51,252.52
+Contra Costa,06013,2014,5-17,male,african,306.93,256.19
+Contra Costa,06013,2014,0-4,female,asian,61.84,72.85
+Contra Costa,06013,2014,0-4,male,asian,68.49,122.83
+Contra Costa,06013,2014,5-17,female,asian,22.29,59.6
+Contra Costa,06013,2014,5-17,male,asian,44.34,66.49
+Contra Costa,06013,2014,0-4,female,hispanic,108.9,72.85
+Contra Costa,06013,2014,0-4,male,hispanic,168.73,122.83
+Contra Costa,06013,2014,5-17,female,hispanic,71.27,59.6
+Contra Costa,06013,2014,5-17,male,hispanic,113.35,66.49
+Contra Costa,06013,2014,0-4,female,other,75.19,79.53
+Contra Costa,06013,2014,0-4,male,other,234.03,215.41
+Contra Costa,06013,2014,5-17,female,other,61.54,64.08
+Contra Costa,06013,2014,5-17,male,other,124.24,117.83
+Contra Costa,06013,2014,0-4,female,white,35.2,72.85
+Contra Costa,06013,2014,0-4,male,white,70.74,122.83
+Contra Costa,06013,2014,5-17,female,white,36.17,59.6
+Contra Costa,06013,2014,5-17,male,white,37.82,66.49
+El Dorado,06017,2014,5-17,female,hispanic,46.69,40.21
+El Dorado,06017,2014,5-17,male,hispanic,40.98,40.41
+El Dorado,06017,2014,5-17,female,other,211.19,343.95
+El Dorado,06017,2014,5-17,male,other,143.8,368.57
+El Dorado,06017,2014,0-4,male,white,81.44,88.32
+El Dorado,06017,2014,5-17,female,white,37.84,40.21
+El Dorado,06017,2014,5-17,male,white,47.67,40.41
+Fresno,06019,2014,0-4,female,african,413.65,398.8
+Fresno,06019,2014,0-4,male,african,774.68,672.67
+Fresno,06019,2014,5-17,female,african,208.31,229.07
+Fresno,06019,2014,5-17,male,african,372.57,353.66
+Fresno,06019,2014,0-4,female,asian,72.39,129.93
+Fresno,06019,2014,0-4,male,asian,104.19,136.51
+Fresno,06019,2014,5-17,female,asian,28.17,91.83
+Fresno,06019,2014,5-17,male,asian,36.59,134.28
+Fresno,06019,2014,0-4,female,hispanic,175.3,129.93
+Fresno,06019,2014,0-4,male,hispanic,285.19,136.51
+Fresno,06019,2014,5-17,female,hispanic,111.08,91.83
+Fresno,06019,2014,5-17,male,hispanic,164.81,134.28
+Fresno,06019,2014,0-4,male,other,94.72,295.35
+Fresno,06019,2014,5-17,female,other,39.45,76.31
+Fresno,06019,2014,5-17,male,other,93.74,224.68
+Fresno,06019,2014,0-4,female,white,136.65,129.93
+Fresno,06019,2014,0-4,male,white,187.07,136.51
+Fresno,06019,2014,5-17,female,white,106.29,91.83
+Fresno,06019,2014,5-17,male,white,146.99,134.28
+Humboldt,06023,2014,0-4,male,white,111.51,131.58
+Humboldt,06023,2014,5-17,female,white,78.47,68.82
+Humboldt,06023,2014,5-17,male,white,52.69,60.16
+Imperial,06025,2014,0-4,female,hispanic,65.26,101.34
+Imperial,06025,2014,0-4,male,hispanic,154.6,238.2
+Imperial,06025,2014,5-17,female,hispanic,114.96,126.13
+Imperial,06025,2014,5-17,male,hispanic,212.78,164.98
+Imperial,06025,2014,5-17,female,white,133.86,126.13
+Imperial,06025,2014,5-17,male,white,148.06,164.98
+Kern,06029,2014,0-4,female,african,282.43,374.53
+Kern,06029,2014,0-4,male,african,579.56,518.09
+Kern,06029,2014,5-17,female,african,304.28,247.26
+Kern,06029,2014,5-17,male,african,333.77,323.97
+Kern,06029,2014,0-4,female,hispanic,66.59,71.33
+Kern,06029,2014,0-4,male,hispanic,134.84,128.11
+Kern,06029,2014,5-17,female,hispanic,61.7,68.35
+Kern,06029,2014,5-17,male,hispanic,99.81,89.35
+Kern,06029,2014,0-4,male,other,171.34,439.63
+Kern,06029,2014,5-17,female,other,50.02,126.86
+Kern,06029,2014,5-17,male,other,91.51,162.14
+Kern,06029,2014,0-4,female,white,74.02,71.33
+Kern,06029,2014,0-4,male,white,123.6,128.11
+Kern,06029,2014,5-17,female,white,71.5,68.35
+Kern,06029,2014,5-17,male,white,89.62,89.35
+Kings,06031,2014,5-17,female,african,200.52,265.78
+Kings,06031,2014,5-17,male,african,591.78,344.49
+Kings,06031,2014,0-4,female,hispanic,60.21,93.22
+Kings,06031,2014,0-4,male,hispanic,261.4,261.08
+Kings,06031,2014,5-17,female,hispanic,76.23,94.27
+Kings,06031,2014,5-17,male,hispanic,134.97,115.43
+Kings,06031,2014,0-4,female,white,131.25,93.22
+Kings,06031,2014,0-4,male,white,178.67,261.08
+Kings,06031,2014,5-17,female,white,126.04,94.27
+Kings,06031,2014,5-17,male,white,188.8,115.43
+Lake,06033,2014,0-4,female,white,123.97,157.51
+Lake,06033,2014,0-4,male,white,197.93,181.76
+Lake,06033,2014,5-17,female,white,59.48,58.42
+Lake,06033,2014,5-17,male,white,92.14,77.75
+Los Angeles,06037,2014,0-4,female,african,247.9,248.0
+Los Angeles,06037,2014,0-4,male,african,416.86,454.15
+Los Angeles,06037,2014,5-17,female,african,194.3,189.27
+Los Angeles,06037,2014,5-17,male,african,312.75,290.6
+Los Angeles,06037,2014,0-4,female,asian,23.48,60.81
+Los Angeles,06037,2014,0-4,male,asian,48.53,108.86
+Los Angeles,06037,2014,5-17,female,asian,15.4,27.8
+Los Angeles,06037,2014,5-17,male,asian,32.89,49.07
+Los Angeles,06037,2014,0-4,female,hispanic,70.09,60.81
+Los Angeles,06037,2014,0-4,male,hispanic,134.56,108.86
+Los Angeles,06037,2014,5-17,female,hispanic,60.47,27.8
+Los Angeles,06037,2014,5-17,male,hispanic,101.05,49.07
+Los Angeles,06037,2014,0-4,female,other,94.5,97.7
+Los Angeles,06037,2014,0-4,male,other,189.94,201.3
+Los Angeles,06037,2014,5-17,female,other,81.04,91.31
+Los Angeles,06037,2014,5-17,male,other,133.77,134.49
+Los Angeles,06037,2014,0-4,female,white,35.16,60.81
+Los Angeles,06037,2014,0-4,male,white,68.91,108.86
+Los Angeles,06037,2014,5-17,female,white,39.18,27.8
+Los Angeles,06037,2014,5-17,male,white,54.63,49.07
+Madera,06039,2014,0-4,female,hispanic,190.41,153.46
+Madera,06039,2014,0-4,male,hispanic,285.28,272.82
+Madera,06039,2014,5-17,female,hispanic,85.12,88.46
+Madera,06039,2014,5-17,male,hispanic,136.85,110.39
+Madera,06039,2014,0-4,female,white,127.27,153.46
+Madera,06039,2014,0-4,male,white,240.96,272.82
+Madera,06039,2014,5-17,female,white,82.13,88.46
+Madera,06039,2014,5-17,male,white,91.59,110.39
+Marin,06041,2014,5-17,male,african,315.09,255.16
+Marin,06041,2014,0-4,male,hispanic,145.45,98.62
+Marin,06041,2014,5-17,female,hispanic,35.19,30.76
+Marin,06041,2014,5-17,male,hispanic,61.6,44.39
+Marin,06041,2014,0-4,male,white,50.1,98.62
+Marin,06041,2014,5-17,female,white,29.46,30.76
+Marin,06041,2014,5-17,male,white,23.73,44.39
+Mendocino,06045,2014,5-17,male,hispanic,103.13,69.5
+Mendocino,06045,2014,0-4,female,other,557.77,397.78
+Mendocino,06045,2014,5-17,female,white,50.03,70.78
+Mendocino,06045,2014,5-17,male,white,67.7,69.5
+Merced,06047,2014,0-4,male,african,1322.75,1087.29
+Merced,06047,2014,5-17,female,african,311.34,296.29
+Merced,06047,2014,5-17,male,african,440.64,441.03
+Merced,06047,2014,0-4,female,hispanic,135.36,126.21
+Merced,06047,2014,0-4,male,hispanic,240.53,239.29
+Merced,06047,2014,5-17,female,hispanic,72.52,106.24
+Merced,06047,2014,5-17,male,hispanic,152.4,116.36
+Merced,06047,2014,0-4,female,white,102.7,126.21
+Merced,06047,2014,0-4,male,white,262.33,239.29
+Merced,06047,2014,5-17,female,white,79.06,106.24
+Merced,06047,2014,5-17,male,white,112.8,116.36
+Monterey,06053,2014,0-4,female,hispanic,91.59,78.19
+Monterey,06053,2014,0-4,male,hispanic,129.86,115.71
+Monterey,06053,2014,5-17,female,hispanic,59.28,46.24
+Monterey,06053,2014,5-17,male,hispanic,93.65,58.23
+Monterey,06053,2014,5-17,female,other,95.56,96.36
+Monterey,06053,2014,5-17,male,other,79.39,108.24
+Monterey,06053,2014,0-4,female,white,59.52,78.19
+Monterey,06053,2014,0-4,male,white,60.79,115.71
+Monterey,06053,2014,5-17,female,white,38.08,46.24
+Monterey,06053,2014,5-17,male,white,46.79,58.23
+Napa,06055,2014,0-4,female,hispanic,63.05,62.71
+Napa,06055,2014,0-4,male,hispanic,103.42,98.81
+Napa,06055,2014,5-17,female,hispanic,47.12,37.88
+Napa,06055,2014,5-17,male,hispanic,64.23,60.93
+Napa,06055,2014,0-4,male,white,108.11,98.81
+Napa,06055,2014,5-17,female,white,41.57,37.88
+Napa,06055,2014,5-17,male,white,58.51,60.93
+Nevada,06057,2014,0-4,male,white,77.37,81.8
+Nevada,06057,2014,5-17,female,white,28.18,43.34
+Nevada,06057,2014,5-17,male,white,33.65,42.21
+Orange,06059,2014,0-4,female,african,191.24,189.35
+Orange,06059,2014,0-4,male,african,251.52,288.06
+Orange,06059,2014,5-17,female,african,144.55,142.55
+Orange,06059,2014,5-17,male,african,220.2,204.31
+Orange,06059,2014,0-4,female,asian,23.79,43.22
+Orange,06059,2014,0-4,male,asian,51.38,86.03
+Orange,06059,2014,5-17,female,asian,14.33,33.79
+Orange,06059,2014,5-17,male,asian,26.59,40.74
+Orange,06059,2014,0-4,female,hispanic,60.42,43.22
+Orange,06059,2014,0-4,male,hispanic,113.62,86.03
+Orange,06059,2014,5-17,female,hispanic,43.17,33.79
+Orange,06059,2014,5-17,male,hispanic,70.11,40.74
+Orange,06059,2014,0-4,female,other,55.73,73.5
+Orange,06059,2014,0-4,male,other,142.02,138.75
+Orange,06059,2014,5-17,female,other,48.97,47.7
+Orange,06059,2014,5-17,male,other,55.46,65.87
+Orange,06059,2014,0-4,female,white,49.87,43.22
+Orange,06059,2014,0-4,male,white,94.29,86.03
+Orange,06059,2014,5-17,female,white,34.74,33.79
+Orange,06059,2014,5-17,male,white,50.57,40.74
+Placer,06061,2014,5-17,male,african,441.01,277.85
+Placer,06061,2014,0-4,male,hispanic,69.51,71.76
+Placer,06061,2014,5-17,female,hispanic,20.95,41.12
+Placer,06061,2014,5-17,male,hispanic,25.06,40.11
+Placer,06061,2014,0-4,female,white,26.61,31.95
+Placer,06061,2014,0-4,male,white,70.02,71.76
+Placer,06061,2014,5-17,female,white,45.59,41.12
+Placer,06061,2014,5-17,male,white,40.61,40.11
+Riverside,06065,2014,0-4,female,african,173.03,202.2
+Riverside,06065,2014,0-4,male,african,361.73,366.36
+Riverside,06065,2014,5-17,female,african,172.71,158.11
+Riverside,06065,2014,5-17,male,african,239.93,237.75
+Riverside,06065,2014,0-4,male,asian,33.0,83.28
+Riverside,06065,2014,5-17,female,asian,13.67,42.02
+Riverside,06065,2014,5-17,male,asian,27.11,57.41
+Riverside,06065,2014,0-4,female,hispanic,40.58,43.04
+Riverside,06065,2014,0-4,male,hispanic,75.59,83.28
+Riverside,06065,2014,5-17,female,hispanic,40.13,42.02
+Riverside,06065,2014,5-17,male,hispanic,69.56,57.41
+Riverside,06065,2014,0-4,female,other,41.47,69.37
+Riverside,06065,2014,0-4,male,other,122.02,205.6
+Riverside,06065,2014,5-17,female,other,53.62,78.61
+Riverside,06065,2014,5-17,male,other,71.5,80.42
+Riverside,06065,2014,0-4,female,white,41.79,43.04
+Riverside,06065,2014,0-4,male,white,101.78,83.28
+Riverside,06065,2014,5-17,female,white,46.44,42.02
+Riverside,06065,2014,5-17,male,white,60.99,57.41
+Sacramento,06067,2014,0-4,female,african,258.16,242.21
+Sacramento,06067,2014,0-4,male,african,486.92,462.58
+Sacramento,06067,2014,5-17,female,african,220.87,195.26
+Sacramento,06067,2014,5-17,male,african,308.85,268.93
+Sacramento,06067,2014,0-4,female,asian,25.14,52.51
+Sacramento,06067,2014,0-4,male,asian,80.86,112.28
+Sacramento,06067,2014,5-17,female,asian,14.59,40.75
+Sacramento,06067,2014,5-17,male,asian,51.61,63.76
+Sacramento,06067,2014,0-4,female,hispanic,73.93,52.51
+Sacramento,06067,2014,0-4,male,hispanic,143.0,112.28
+Sacramento,06067,2014,5-17,female,hispanic,49.17,40.75
+Sacramento,06067,2014,5-17,male,hispanic,85.09,63.76
+Sacramento,06067,2014,0-4,female,other,61.62,80.41
+Sacramento,06067,2014,0-4,male,other,109.08,141.67
+Sacramento,06067,2014,5-17,female,other,59.27,59.52
+Sacramento,06067,2014,5-17,male,other,71.54,93.57
+Sacramento,06067,2014,0-4,female,white,47.73,52.51
+Sacramento,06067,2014,0-4,male,white,119.61,112.28
+Sacramento,06067,2014,5-17,female,white,52.29,40.75
+Sacramento,06067,2014,5-17,male,white,57.71,63.76
+San Benito,06069,2014,5-17,female,hispanic,59.47,67.37
+San Benito,06069,2014,5-17,male,hispanic,109.29,96.18
+San Bernardino,06071,2014,0-4,female,african,244.66,247.69
+San Bernardino,06071,2014,0-4,male,african,478.31,511.06
+San Bernardino,06071,2014,5-17,female,african,208.88,197.3
+San Bernardino,06071,2014,5-17,male,african,307.05,285.92
+San Bernardino,06071,2014,0-4,male,asian,44.61,66.54
+San Bernardino,06071,2014,5-17,male,asian,31.84,78.39
+San Bernardino,06071,2014,0-4,female,hispanic,49.05,61.37
+San Bernardino,06071,2014,0-4,male,hispanic,108.46,66.54
+San Bernardino,06071,2014,5-17,female,hispanic,49.16,49.87
+San Bernardino,06071,2014,5-17,male,hispanic,82.26,78.39
+San Bernardino,06071,2014,0-4,female,other,119.52,116.85
+San Bernardino,06071,2014,0-4,male,other,212.97,244.19
+San Bernardino,06071,2014,5-17,female,other,108.44,113.36
+San Bernardino,06071,2014,5-17,male,other,169.71,152.9
+San Bernardino,06071,2014,0-4,female,white,66.91,61.37
+San Bernardino,06071,2014,0-4,male,white,126.26,66.54
+San Bernardino,06071,2014,5-17,female,white,58.2,49.87
+San Bernardino,06071,2014,5-17,male,white,79.99,78.39
+San Diego,06073,2014,0-4,female,african,205.33,205.71
+San Diego,06073,2014,0-4,male,african,352.5,350.6
+San Diego,06073,2014,5-17,female,african,111.54,112.74
+San Diego,06073,2014,5-17,male,african,177.97,174.56
+San Diego,06073,2014,0-4,female,asian,47.74,52.94
+San Diego,06073,2014,0-4,male,asian,86.64,100.52
+San Diego,06073,2014,5-17,female,asian,15.2,19.55
+San Diego,06073,2014,5-17,male,asian,30.78,48.36
+San Diego,06073,2014,0-4,female,hispanic,67.91,52.94
+San Diego,06073,2014,0-4,male,hispanic,133.56,100.52
+San Diego,06073,2014,5-17,female,hispanic,45.64,19.55
+San Diego,06073,2014,5-17,male,hispanic,69.76,48.36
+San Diego,06073,2014,0-4,female,other,98.29,102.75
+San Diego,06073,2014,0-4,male,other,184.99,184.37
+San Diego,06073,2014,5-17,female,other,62.59,56.21
+San Diego,06073,2014,5-17,male,other,73.15,77.85
+San Diego,06073,2014,0-4,female,white,36.59,52.94
+San Diego,06073,2014,0-4,male,white,71.56,100.52
+San Diego,06073,2014,5-17,female,white,25.17,19.55
+San Diego,06073,2014,5-17,male,white,35.13,48.36
+San Francisco,06075,2014,0-4,female,african,314.59,247.53
+San Francisco,06075,2014,0-4,male,african,511.21,523.32
+San Francisco,06075,2014,5-17,female,african,186.43,141.79
+San Francisco,06075,2014,5-17,male,african,242.34,198.49
+San Francisco,06075,2014,0-4,female,asian,29.63,51.4
+San Francisco,06075,2014,0-4,male,asian,68.45,77.01
+San Francisco,06075,2014,5-17,female,asian,35.69,31.26
+San Francisco,06075,2014,5-17,male,asian,38.55,58.65
+San Francisco,06075,2014,0-4,female,hispanic,70.6,51.4
+San Francisco,06075,2014,0-4,male,hispanic,137.92,77.01
+San Francisco,06075,2014,5-17,female,hispanic,72.1,31.26
+San Francisco,06075,2014,5-17,male,hispanic,98.68,58.65
+San Francisco,06075,2014,0-4,female,other,63.39,72.86
+San Francisco,06075,2014,0-4,male,other,181.56,217.67
+San Francisco,06075,2014,5-17,female,other,67.19,86.79
+San Francisco,06075,2014,5-17,male,other,97.43,103.81
+San Francisco,06075,2014,0-4,female,white,51.29,51.4
+San Francisco,06075,2014,0-4,male,white,45.48,77.01
+San Francisco,06075,2014,5-17,female,white,26.85,31.26
+San Francisco,06075,2014,5-17,male,white,32.33,58.65
+San Joaquin,06077,2014,0-4,female,african,308.64,262.21
+San Joaquin,06077,2014,0-4,male,african,505.0,499.09
+San Joaquin,06077,2014,5-17,female,african,195.8,198.49
+San Joaquin,06077,2014,5-17,male,african,342.33,276.25
+San Joaquin,06077,2014,0-4,male,asian,81.78,127.92
+San Joaquin,06077,2014,5-17,female,asian,26.37,42.28
+San Joaquin,06077,2014,5-17,male,asian,33.41,79.08
+San Joaquin,06077,2014,0-4,female,hispanic,62.46,68.17
+San Joaquin,06077,2014,0-4,male,hispanic,136.69,127.92
+San Joaquin,06077,2014,5-17,female,hispanic,51.7,42.28
+San Joaquin,06077,2014,5-17,male,hispanic,93.14,79.08
+San Joaquin,06077,2014,0-4,female,other,114.56,118.08
+San Joaquin,06077,2014,0-4,male,other,145.75,150.5
+San Joaquin,06077,2014,5-17,female,other,72.66,79.59
+San Joaquin,06077,2014,5-17,male,other,125.97,116.15
+San Joaquin,06077,2014,0-4,female,white,80.57,68.17
+San Joaquin,06077,2014,0-4,male,white,114.4,127.92
+San Joaquin,06077,2014,5-17,female,white,54.2,42.28
+San Joaquin,06077,2014,5-17,male,white,66.8,79.08
+San Luis Obispo,06079,2014,0-4,female,hispanic,68.38,67.31
+San Luis Obispo,06079,2014,0-4,male,hispanic,51.59,68.26
+San Luis Obispo,06079,2014,5-17,female,hispanic,49.07,43.26
+San Luis Obispo,06079,2014,5-17,male,hispanic,52.64,52.39
+San Luis Obispo,06079,2014,0-4,male,white,110.39,68.26
+San Luis Obispo,06079,2014,5-17,female,white,34.76,43.26
+San Luis Obispo,06079,2014,5-17,male,white,54.37,52.39
+San Mateo,06081,2014,5-17,male,african,91.27,109.89
+San Mateo,06081,2014,0-4,female,asian,40.89,47.29
+San Mateo,06081,2014,0-4,male,asian,43.04,55.98
+San Mateo,06081,2014,5-17,female,asian,24.88,36.81
+San Mateo,06081,2014,5-17,male,asian,23.11,55.95
+San Mateo,06081,2014,0-4,female,hispanic,81.37,47.29
+San Mateo,06081,2014,0-4,male,hispanic,140.62,55.98
+San Mateo,06081,2014,5-17,female,hispanic,45.9,36.81
+San Mateo,06081,2014,5-17,male,hispanic,64.42,55.95
+San Mateo,06081,2014,0-4,female,other,108.4,113.56
+San Mateo,06081,2014,0-4,male,other,162.19,176.2
+San Mateo,06081,2014,5-17,female,other,71.14,78.28
+San Mateo,06081,2014,5-17,male,other,94.33,93.81
+San Mateo,06081,2014,0-4,female,white,25.24,47.29
+San Mateo,06081,2014,0-4,male,white,58.33,55.98
+San Mateo,06081,2014,5-17,female,white,28.07,36.81
+San Mateo,06081,2014,5-17,male,white,37.57,55.95
+Santa Barbara,06083,2014,0-4,female,hispanic,51.08,55.24
+Santa Barbara,06083,2014,0-4,male,hispanic,103.25,97.19
+Santa Barbara,06083,2014,5-17,female,hispanic,57.51,53.63
+Santa Barbara,06083,2014,5-17,male,hispanic,86.92,72.36
+Santa Barbara,06083,2014,0-4,female,white,57.75,55.24
+Santa Barbara,06083,2014,0-4,male,white,76.99,97.19
+Santa Barbara,06083,2014,5-17,female,white,55.14,53.63
+Santa Barbara,06083,2014,5-17,male,white,43.55,72.36
+Santa Clara,06085,2014,0-4,female,african,88.11,114.74
+Santa Clara,06085,2014,0-4,male,african,117.48,156.45
+Santa Clara,06085,2014,5-17,female,african,115.63,113.42
+Santa Clara,06085,2014,5-17,male,african,133.95,140.07
+Santa Clara,06085,2014,0-4,female,asian,31.0,42.34
+Santa Clara,06085,2014,0-4,male,asian,40.23,54.41
+Santa Clara,06085,2014,5-17,female,asian,9.13,30.94
+Santa Clara,06085,2014,5-17,male,asian,27.64,42.64
+Santa Clara,06085,2014,0-4,female,hispanic,52.19,42.34
+Santa Clara,06085,2014,0-4,male,hispanic,101.94,54.41
+Santa Clara,06085,2014,5-17,female,hispanic,37.07,30.94
+Santa Clara,06085,2014,5-17,male,hispanic,66.92,42.64
+Santa Clara,06085,2014,0-4,female,other,40.98,80.59
+Santa Clara,06085,2014,0-4,male,other,78.52,91.96
+Santa Clara,06085,2014,5-17,female,other,35.32,34.18
+Santa Clara,06085,2014,5-17,male,other,36.87,59.65
+Santa Clara,06085,2014,0-4,female,white,16.33,42.34
+Santa Clara,06085,2014,0-4,male,white,52.43,54.41
+Santa Clara,06085,2014,5-17,female,white,26.82,30.94
+Santa Clara,06085,2014,5-17,male,white,26.89,42.64
+Santa Cruz,06087,2014,0-4,female,hispanic,106.08,113.33
+Santa Cruz,06087,2014,0-4,male,hispanic,150.31,104.57
+Santa Cruz,06087,2014,5-17,female,hispanic,62.22,49.42
+Santa Cruz,06087,2014,5-17,male,hispanic,99.77,72.4
+Santa Cruz,06087,2014,0-4,male,white,89.17,104.57
+Santa Cruz,06087,2014,5-17,female,white,26.68,49.42
+Santa Cruz,06087,2014,5-17,male,white,30.44,72.4
+Shasta,06089,2014,5-17,male,hispanic,53.24,86.35
+Shasta,06089,2014,0-4,female,white,76.69,70.62
+Shasta,06089,2014,0-4,male,white,124.53,161.17
+Shasta,06089,2014,5-17,female,white,72.16,65.8
+Shasta,06089,2014,5-17,male,white,90.26,86.35
+Siskiyou,06093,2014,5-17,male,white,68.43,69.1
+Solano,06095,2014,0-4,female,african,315.22,313.44
+Solano,06095,2014,0-4,male,african,566.65,390.69
+Solano,06095,2014,5-17,female,african,300.47,201.98
+Solano,06095,2014,5-17,male,african,381.25,321.01
+Solano,06095,2014,0-4,male,asian,137.54,128.22
+Solano,06095,2014,5-17,female,asian,48.75,52.25
+Solano,06095,2014,5-17,male,asian,40.42,81.63
+Solano,06095,2014,0-4,female,hispanic,71.75,59.69
+Solano,06095,2014,0-4,male,hispanic,132.94,128.22
+Solano,06095,2014,5-17,female,hispanic,55.09,52.25
+Solano,06095,2014,5-17,male,hispanic,95.01,81.63
+Solano,06095,2014,0-4,male,other,138.52,133.48
+Solano,06095,2014,5-17,female,other,57.83,57.8
+Solano,06095,2014,5-17,male,other,54.17,65.49
+Solano,06095,2014,0-4,female,white,59.99,59.69
+Solano,06095,2014,0-4,male,white,115.2,128.22
+Solano,06095,2014,5-17,female,white,57.62,52.25
+Solano,06095,2014,5-17,male,white,111.45,81.63
+Sonoma,06097,2014,5-17,male,african,310.18,294.12
+Sonoma,06097,2014,0-4,female,hispanic,45.18,44.66
+Sonoma,06097,2014,0-4,male,hispanic,106.03,110.42
+Sonoma,06097,2014,5-17,female,hispanic,40.38,38.27
+Sonoma,06097,2014,5-17,male,hispanic,63.22,49.98
+Sonoma,06097,2014,0-4,female,white,34.81,44.66
+Sonoma,06097,2014,0-4,male,white,121.4,110.42
+Sonoma,06097,2014,5-17,female,white,37.96,38.27
+Sonoma,06097,2014,5-17,male,white,39.24,49.98
+Stanislaus,06099,2014,0-4,female,african,350.0,357.43
+Stanislaus,06099,2014,0-4,male,african,714.29,462.17
+Stanislaus,06099,2014,5-17,female,african,392.71,264.9
+Stanislaus,06099,2014,5-17,male,african,463.98,388.35
+Stanislaus,06099,2014,0-4,female,hispanic,65.28,66.72
+Stanislaus,06099,2014,0-4,male,hispanic,123.07,117.93
+Stanislaus,06099,2014,5-17,female,hispanic,57.17,63.0
+Stanislaus,06099,2014,5-17,male,hispanic,104.96,93.65
+Stanislaus,06099,2014,5-17,female,other,78.9,158.83
+Stanislaus,06099,2014,5-17,male,other,127.57,118.88
+Stanislaus,06099,2014,0-4,female,white,63.66,66.72
+Stanislaus,06099,2014,0-4,male,white,155.04,117.93
+Stanislaus,06099,2014,5-17,female,white,73.85,63.0
+Stanislaus,06099,2014,5-17,male,white,101.19,93.65
+Sutter,06101,2014,0-4,male,hispanic,93.19,84.0
+Sutter,06101,2014,5-17,female,hispanic,54.13,47.72
+Sutter,06101,2014,5-17,male,hispanic,66.28,58.23
+Sutter,06101,2014,5-17,male,white,62.87,58.23
+Tehama,06103,2014,0-4,male,hispanic,209.21,195.61
+Tehama,06103,2014,0-4,male,white,149.78,195.61
+Tehama,06103,2014,5-17,female,white,63.72,58.36
+Tehama,06103,2014,5-17,male,white,81.28,78.51
+Tulare,06107,2014,5-17,male,african,244.7,265.75
+Tulare,06107,2014,0-4,female,hispanic,59.27,52.83
+Tulare,06107,2014,0-4,male,hispanic,119.29,101.72
+Tulare,06107,2014,5-17,female,hispanic,34.45,34.08
+Tulare,06107,2014,5-17,male,hispanic,69.51,64.8
+Tulare,06107,2014,0-4,female,other,568.93,609.03
+Tulare,06107,2014,0-4,male,other,1264.37,1248.66
+Tulare,06107,2014,5-17,female,other,556.33,516.71
+Tulare,06107,2014,5-17,male,other,907.19,805.44
+Tulare,06107,2014,0-4,male,white,82.77,101.72
+Tulare,06107,2014,5-17,female,white,30.47,34.08
+Tulare,06107,2014,5-17,male,white,53.11,64.8
+Tuolumne,06109,2014,5-17,female,white,109.45,80.82
+Tuolumne,06109,2014,5-17,male,white,60.21,80.05
+Ventura,06111,2014,0-4,male,african,402.68,463.16
+Ventura,06111,2014,5-17,female,african,330.3,253.64
+Ventura,06111,2014,5-17,male,african,145.75,204.74
+Ventura,06111,2014,5-17,male,asian,36.43,48.67
+Ventura,06111,2014,0-4,female,hispanic,59.55,60.06
+Ventura,06111,2014,0-4,male,hispanic,93.14,90.92
+Ventura,06111,2014,5-17,female,hispanic,45.65,40.13
+Ventura,06111,2014,5-17,male,hispanic,77.57,48.67
+Ventura,06111,2014,5-17,female,other,39.18,43.32
+Ventura,06111,2014,5-17,male,other,54.07,66.03
+Ventura,06111,2014,0-4,female,white,65.56,60.06
+Ventura,06111,2014,0-4,male,white,86.05,90.92
+Ventura,06111,2014,5-17,female,white,44.71,40.13
+Ventura,06111,2014,5-17,male,white,44.77,48.67
+Yolo,06113,2014,0-4,female,hispanic,83.26,59.59
+Yolo,06113,2014,0-4,male,hispanic,123.36,94.75
+Yolo,06113,2014,5-17,female,hispanic,60.11,35.86
+Yolo,06113,2014,5-17,male,hispanic,61.19,53.82
+Yolo,06113,2014,0-4,male,white,51.3,94.75
+Yolo,06113,2014,5-17,female,white,40.9,35.86
+Yolo,06113,2014,5-17,male,white,57.1,53.82
