@@ -82,10 +82,10 @@ def breath_output():
 			ranks= getRanks(fips=county_fips, age=age, gender=gender, ethnicity=ethnicity)
 			impact= getImpact(fips=county_fips, age=age, gender=gender, ethnicity=ethnicity)
 
-			if rates == None:
-				return render_template("missing.html", counties=counties, county_name=county_name, age=age, gender=gender, eth_name=eth_name)
+			if rates != None:
+				return render_template("output.html", counties=counties, rates=rates, ranks=ranks, impact=impact, eth_name=eth_name)
 			else:
-				return render_template("output.html", counties=counties, rates=rates, ranks=ranks, impact=impact)
+				return render_template("missing.html", counties=counties, county_name=county_name, age=age, gender=gender, eth_name=eth_name)
 		except:
 				return render_template("missing.html", counties=counties, county_name=county_name, age=age, gender=gender, eth_name=eth_name)
 

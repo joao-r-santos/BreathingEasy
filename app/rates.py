@@ -1,6 +1,6 @@
 from numpy import array, str
 import pandas as pd
-from utils import getEthName
+#from utils import getEthName
 
 def getRates(fips='06037', age='0-4', gender='female', ethnicity='hispanic'):
 	#print fips, age, gender, ethnicity
@@ -15,7 +15,7 @@ def getRates(fips='06037', age='0-4', gender='female', ethnicity='hispanic'):
 		row= row.to_dict(orient='records')
 		row= row[0] # select only the dict
 
-		row['Ethnicity']= getEthName(row['Ethnicity'])
+		#row['Ethnicity']= getEthName(row['Ethnicity'])
 
 
 	except:
