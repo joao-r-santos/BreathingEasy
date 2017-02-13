@@ -23,7 +23,7 @@
 
           <select class="selectpicker" name="county" id="county">
           <option value="0" selected disabled><strong>County</strong></option>
-          <option data-divider="true" disabled></option>
+<!--          <option data-divider="true" disabled></option>-->
           {% for c in counties %}
             <!-- counties without data -->
             {% if c['County'] != "Alpine" and c['County'] != "Del Norte" and c['County'] != "Glenn" and c['County'] != "Inyo" and c['County'] != "Lassen" and c['County'] != "Mariposa" and c['County'] != "Modoc" and c['County'] != "Mono" and c['County'] != "Plumas" and c['County'] != "Sierra" and c['County'] != "Trinity" and c['County'] != "Yuba" %}
@@ -37,21 +37,21 @@
 
         <select class="selectpicker" name="age" id="age">
             <option value="0" selected disabled><strong>Age</strong></option>
-            <option data-divider="true" disabled></option>
+<!--            <option data-divider="true" disabled></option>-->
             <option value="0-4">0-4 years</option>
             <option value="5-17">5-17 years</option>
         </select> 
 
         <select class="selectpicker" name="gender" id="gender">
             <option value="0" selected disabled><strong>Gender</strong></option>
-            <option data-divider="true" disabled></option>
+<!--            <option data-divider="true" disabled></option>-->
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select> 
 
         <select class="selectpicker" name="ethnicity" id="ethnicity">
             <option value="0" selected disabled><strong>Ethnicity</strong></option>
-            <option data-divider="true" disabled></option>
+<!--            <option data-divider="true" disabled></option>-->
             <option value="white">White/Caucasian</option>
             <option value="african">African-American</option>
             <option value="asian">Asian-American/Pacific Islander</option>
