@@ -2,110 +2,9 @@
 {% block content %}
 
 <!--
-<br>
-<br>
+  <br>
+  <br>
 -->
-<div class="container">
-
-    <div class="container">
-      <h2>Selected options for which to see the most important factors of pediatric asthma</h2>
-    </div>
-
-    <div class = "container">
-
-      <form  action="/output" method="GET">
-
-          <select class="selectpicker" name="county" id="county">
-          <option value="0" selected disabled><strong>County</strong></option>
-          <option data-divider="true" disabled></option>
-          {% for c in counties %}
-            <!-- counties without data -->
-            {% if c['County'] != "Alpine" and c['County'] != "Del Norte" and c['County'] != "Glenn" and c['County'] != "Inyo" and c['County'] != "Lassen" and c['County'] != "Mariposa" and c['County'] != "Modoc" and c['County'] != "Mono" and c['County'] != "Plumas" and c['County'] != "Sierra" and c['County'] != "Trinity" and c['County'] != "Yuba" %}
-              {% if c['FIPS']==rates['FIPS'] %}
-                <option value={{ c['FIPS'] }} selected data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
-              {% else %}
-                <option value={{ c['FIPS'] }} data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
-              {% endif %}
-            {% else %}
-            <!-- disable option for counties without data -->
-              <option value={{ c['FIPS'] }} disabled> {{ c['County'] }}</option>
-            {% endif %}
-          {% endfor %}
-        </select> 
-
-        <select class="selectpicker" name="age" id="age">
-            <option value="0" selected disabled><strong>Age</strong></option>
-            <option data-divider="true" disabled></option>
-            {% if rates['Age'] == "0-4" %}
-              <option value="0-4" selected>0-4 years</option>
-            {% else %}
-              <option value="0-4">0-4 years</option>
-            {% endif %}
-            {% if rates['Age'] == "5-17" %}
-              <option value="5-17" selected>5-17 years</option>
-            {% else %}
-              <option value="5-17">5-17 years</option>
-            {% endif %}
-        </select> 
-
-        <select class="selectpicker" name="gender" id="gender">
-            <option value="0" selected disabled><strong>Gender</strong></option>
-            <option data-divider="true" disabled></option>
-            {% if rates['Gender'] == "male" %}
-                <option value="male" selected>Male</option>
-            {% else %}
-                <option value="male">Male</option>
-            {% endif %}
-            {% if rates['Gender'] == "female" %}
-                <option value="female" selected>Female</option>
-            {% else %}
-                <option value="female">Female</option>
-            {% endif %}
-        </select> 
-
-        <select class="selectpicker" name="ethnicity" id="ethnicity">
-            <option value="0" selected disabled><strong>Ethnicity</strong></option>
-            <option data-divider="true" disabled></option>
-            {% if rates['Ethnicity'] == "white" %}
-                <option value="white" selected>White/Caucasian</option>
-            {% else %}
-                <option value="white">White/Caucasian</option>
-            {% endif %}
-            {% if rates['Ethnicity'] == "african" %}
-                <option value="african" selected>African-American</option>
-            {% else %}
-                <option value="african">African-American</option>
-            {% endif %}
-            {% if rates['Ethnicity'] == "asian" %}
-                <option value="asian" selected>Asian-American/Pacific Islander</option>
-            {% else %}
-                <option value="asian">Asian-American/Pacific Islander</option>
-            {% endif %}
-            {% if rates['Ethnicity'] == "hispanic" %}
-                <option value="hispanic" selected>Hispanic</option>
-            {% else %}
-                <option value="hispanic">Hispanic</option>
-            {% endif %}
-            {% if rates['Ethnicity'] == "other" %}
-                <option value="other" selected>Other</option>
-            {% else %}
-                <option value="other">Other</option>
-            {% endif %}
-        </select> 
-
-        <span>
-          <button type="submit" class="btn btn-primary" align="center">Analyze</button>
-        </span>
-
-      </form>
-    
-    </div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-
-    </div><!-- /.container -->
-  <br>
-  <br>
 
   <div class="container">
     <h2>Results for {{ rates['Gender'] }} {{ eth_name }} children {{ rates['Age'] }} years old</h2>
@@ -252,35 +151,10 @@
   </div><!-- /.container -->
 
     <br>
-
-  <div class="container">
-    <div class="starter-template">
-        <h3>Factors for pediatric asthma</h3>
-<!--
-<p class="lead">The most important factors for pediatric asthma are given in the following table.</p>
--->
-        <p class="lead">
-            Each factor is given an impact score.
-            This score reflects the predicted change in ED visit rates for pediatric asthma given a reduction of 10% in the corresponding factor.
-            For example, an impact score of 3 for the factor Traffic pollution corresponds to a predicted reduction by 3 of the ED visit rate, given an initial reduction of the Traffic pollution by 10%.
-        </p>
-    </div>
-  </div><!-- /.container -->
-
-
-    <br>
-
-  <div class="container">
-    <div class="starter-template">
-        <h3>Comparison to other counties</h3>
-        <p class="lead">
-            For each factor, I present the percentile rank of the {{rates['County']}} county in relation to all the other counties in California.
-            For example, a percentile rank of 70% means that this particular county is better placed than 70% of all California counties for this factor.
-        </p>
-    </div>
-  </div><!-- /.container -->
-
-    <br>
+<div class="container">
+    <h2>Factors for pediatric asthma</h2>
+    <p class="lead">Sort through the table to highlight the most relevant factors in {{ rates['County'] }} county</p>
+</div>
 
 <style>
     .chart div {
@@ -298,9 +172,20 @@
 <!--    <table class="table table-hover table-striped">-->
         <thead>
             <tr>
-              <th>Factor</th>
-              <th>Percentile rank<br>(higher is better)</th>
-              <th>Impact Score</th>
+              <th>
+                Factor
+                <span class="caret"></span>
+              </th>
+              <th>
+                  Percentile rank
+                  <span class="caret"></span>
+                  <br>
+                  (higher is better)
+                </th>
+              <th>
+                  Impact Score
+                  <span class="caret"></span>
+              </th>
             </tr>
         </thead>
         <tbody>
@@ -357,7 +242,136 @@ d3.selectAll(".chart")
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
+  <div class="container">
+    <div class="starter-template">
+        <h3>Factors for pediatric asthma</h3>
+<!--
+<p class="lead">The most important factors for pediatric asthma are given in the following table.</p>
+-->
+        <p class="lead">
+            Each factor is given an impact score.
+            This score reflects the predicted change in ED visit rates for pediatric asthma given a reduction of 10% in the corresponding factor.
+            For example, an impact score of 3 for the factor Traffic pollution corresponds to a predicted reduction by 3 of the ED visit rate, given an initial reduction of the Traffic pollution by 10%.
+        </p>
+    </div>
+  </div><!-- /.container -->
 
+
+<!--    <br>-->
+
+  <div class="container">
+    <div class="starter-template">
+        <h3>Comparison to other counties</h3>
+        <p class="lead">
+            For each factor, I present the percentile rank of the {{rates['County']}} county in relation to all the other counties in California.
+            For example, a percentile rank of 70% means that this particular county is better placed than 70% of all California counties for this factor.
+        </p>
+    </div>
+  </div><!-- /.container -->
+
+
+
+<br>
+<br>
+<div class="container">
+
+    <div class="container">
+      <h2>Select other options for which to see the most important factors of pediatric asthma</h2>
+    </div>
+
+    <div class = "container">
+
+      <form  action="/output" method="GET">
+
+          <select class="selectpicker" name="county" id="county">
+          <option value="0" selected disabled><strong>County</strong></option>
+          <option data-divider="true" disabled></option>
+          {% for c in counties %}
+            <!-- counties without data -->
+            {% if c['County'] != "Alpine" and c['County'] != "Del Norte" and c['County'] != "Glenn" and c['County'] != "Inyo" and c['County'] != "Lassen" and c['County'] != "Mariposa" and c['County'] != "Modoc" and c['County'] != "Mono" and c['County'] != "Plumas" and c['County'] != "Sierra" and c['County'] != "Trinity" and c['County'] != "Yuba" %}
+              {% if c['FIPS']==rates['FIPS'] %}
+                <option value={{ c['FIPS'] }} selected data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
+              {% else %}
+                <option value={{ c['FIPS'] }} data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
+              {% endif %}
+            {% else %}
+            <!-- disable option for counties without data -->
+              <option value={{ c['FIPS'] }} disabled> {{ c['County'] }}</option>
+            {% endif %}
+          {% endfor %}
+        </select> 
+
+        <select class="selectpicker" name="age" id="age">
+            <option value="0" selected disabled><strong>Age</strong></option>
+            <option data-divider="true" disabled></option>
+            {% if rates['Age'] == "0-4" %}
+              <option value="0-4" selected>0-4 years</option>
+            {% else %}
+              <option value="0-4">0-4 years</option>
+            {% endif %}
+            {% if rates['Age'] == "5-17" %}
+              <option value="5-17" selected>5-17 years</option>
+            {% else %}
+              <option value="5-17">5-17 years</option>
+            {% endif %}
+        </select> 
+
+        <select class="selectpicker" name="gender" id="gender">
+            <option value="0" selected disabled><strong>Gender</strong></option>
+            <option data-divider="true" disabled></option>
+            {% if rates['Gender'] == "male" %}
+                <option value="male" selected>Male</option>
+            {% else %}
+                <option value="male">Male</option>
+            {% endif %}
+            {% if rates['Gender'] == "female" %}
+                <option value="female" selected>Female</option>
+            {% else %}
+                <option value="female">Female</option>
+            {% endif %}
+        </select> 
+
+        <select class="selectpicker" name="ethnicity" id="ethnicity">
+            <option value="0" selected disabled><strong>Ethnicity</strong></option>
+            <option data-divider="true" disabled></option>
+            {% if rates['Ethnicity'] == "white" %}
+                <option value="white" selected>White/Caucasian</option>
+            {% else %}
+                <option value="white">White/Caucasian</option>
+            {% endif %}
+            {% if rates['Ethnicity'] == "african" %}
+                <option value="african" selected>African-American</option>
+            {% else %}
+                <option value="african">African-American</option>
+            {% endif %}
+            {% if rates['Ethnicity'] == "asian" %}
+                <option value="asian" selected>Asian-American/Pacific Islander</option>
+            {% else %}
+                <option value="asian">Asian-American/Pacific Islander</option>
+            {% endif %}
+            {% if rates['Ethnicity'] == "hispanic" %}
+                <option value="hispanic" selected>Hispanic</option>
+            {% else %}
+                <option value="hispanic">Hispanic</option>
+            {% endif %}
+            {% if rates['Ethnicity'] == "other" %}
+                <option value="other" selected>Other</option>
+            {% else %}
+                <option value="other">Other</option>
+            {% endif %}
+        </select> 
+
+        <span>
+          <button type="submit" class="btn btn-primary" align="center">Analyze</button>
+        </span>
+
+      </form>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</div><!-- /.container -->
 
   </div><!-- /.container -->
 
