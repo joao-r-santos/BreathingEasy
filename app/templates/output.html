@@ -108,7 +108,7 @@
   <br>
 
   <div class="container">
-    <h2>Results for {{ rates['Gender'] }} {{ eth_name }} children with {{ rates['Age'] }} years</h2>
+    <h2>Results for {{ rates['Gender'] }} {{ eth_name }} children {{ rates['Age'] }} years old</h2>
       <div class="row">
           <div class="col-md-6">
             <div class="starter-template">
@@ -308,31 +308,31 @@
                 <td>PM2.5 air quality</td>
                 <td>Better than {{ ranks['PM2.5 AQI'] | round | int }}% of measured counties</td>
                 <td class="chart"><div style="width: {{ impact['PM2.5 AQI'] | round(2) }}ch">{{ impact['PM2.5 AQI'] | round(2) }}</div></td>
-<!--                <td class="chart"><div>{{ impact['PM2.5 AQI'] | round(2) }}</div></td>-->
+<!--                <td class="chart"><div>"{{ impact['PM2.5 AQI'] | round(2) }}"</div></td>-->
             </tr>
             <tr>
                 <td>Traffic pollution</td>
                 <td>Better than {{ ranks['Traffic pollution'] | round | int }}% of measured counties</td>
                 <td class="chart"><div style="width: {{ impact['Traffic pollution'] | round(2) }}ch;">{{ impact['Traffic pollution'] | round(2) }}</div></td>
-<!--                <td class="chart"><div>{{ impact['Traffic pollution'] | round(2) }}</div></td>-->
+<!--                <td class="chart"><div>"{{ impact['Traffic pollution'] | round(2) }}"</div></td>-->
             </tr>
             <tr>
                 <td>Ozone air quality</td>
                 <td>Better than {{ ranks['O3 AQI'] | round | int }}% of measured counties</td>
                 <td class="chart"><div style="width: {{ impact['O3 AQI'] | round(2) }}ch;">{{ impact['O3 AQI'] | round(2) }}</div></td>
-<!--                <td class="chart"><div>{{ impact['O3 AQI'] | round(2) }}</div></td>-->
+<!--                <td class="chart"><div>"{{ impact['O3 AQI'] | round(2) }}"</div></td>-->
             </tr>
             <tr>
                 <td>Median air quality index</td>
                 <td>Better than {{ ranks['AQI Median'] | round | int }}% of measured counties</td>
                 <td class="chart"><div style="width: {{ impact['AQI Median'] | round(2) }}ch;">{{ impact['AQI Median'] | round(2) }}</div></td>
-<!--                <td class="chart"><div>{{ impact['AQI Median'] | round(2) }}</div></td>-->
+<!--                <td class="chart"><div>"{{ impact['AQI Median'] | round(2) }}"</div></td>-->
             </tr>
             <tr>
                 <td>Area burned by wild fires</td>
                 <td>Better than {{ ranks['Area burned'] | round | int }}% of measured counties</td>
                 <td class="chart"><div style="width: {{ impact['Area burned'] | round(2) }}ch;">{{ impact['Area burned'] | round(2) }}</div></td>
-<!--                <td class="chart"><div>{{ impact['Area burned'] | round(2) }}</div></td>-->
+<!--                <td class="chart"><div>"{{ impact['Area burned'] | round(2) }}"</div></td>-->
             </tr>
         </tbody>
     </table>
