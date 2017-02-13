@@ -9,7 +9,7 @@ body {
 }
 
 .navbar-fixed-top .nav {
-    padding: 15px 0;
+    padding: 0 15px;
 }
 
 .navbar-fixed-top .navbar-brand {
@@ -22,6 +22,6 @@ body {
     }
 
     .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
+        padding: 0 15px;
     }
 }

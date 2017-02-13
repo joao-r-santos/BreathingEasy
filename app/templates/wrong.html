@@ -1,6 +1,9 @@
 {% extends "base_template.html" %}
 {% block content %}
-  <div class="container">
+
+<br>
+<br>
+<div class="container">
 
     <div class="container">
       <h3>Select a county in California to see the most important factors related to pediatric asthma</h3>
@@ -9,37 +12,42 @@
     <div class = "container">
 
       <form  action="/output" method="GET">
-        <select class="selectpicker" name="county" id="county">
-          <option value="0" selected disabled>County</option>
+
+          <select class="selectpicker" name="county" id="county">
+          <option value="0" selected disabled><strong>County</strong></option>
+          <option data-divider="true" disabled></option>
           {% for c in counties %}
               <option value={{ c['FIPS'] }} data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
           {% endfor %}
         </select> 
 
         <select class="selectpicker" name="age" id="age">
-          <option value="0" selected disabled>Age</option>
-              <option value="0-4">0-4 years</option>
-              <option value="5-17">5-17 years</option>
+            <option value="0" selected disabled><strong>Age</strong></option>
+            <option data-divider="true" disabled></option>
+                <option value="0-4">0-4 years</option>
+                <option value="5-17">5-17 years</option>
         </select> 
 
         <select class="selectpicker" name="gender" id="gender">
-          <option value="0" selected disabled>Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+            <option value="0" selected disabled><strong>Gender</strong></option>
+            <option data-divider="true" disabled></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
         </select> 
 
         <select class="selectpicker" name="ethnicity" id="ethnicity">
-          <option value="0" selected disabled>Ethnicity</option>
-              <option value="white">White/Caucasian</option>
-              <option value="african">African-American</option>
-              <option value="asian">Asian-American/Pacific Islander</option>
-              <option value="hispanic">Hispanic</option>
-              <option value="other">Other</option>
+            <option value="0" selected disabled><strong>Ethnicity</strong></option>
+            <option data-divider="true" disabled></option>
+                <option value="white">White/Caucasian</option>
+                <option value="african">African-American</option>
+                <option value="asian">Asian-American/Pacific Islander</option>
+                <option value="hispanic">Hispanic</option>
+                <option value="other">Other</option>
         </select> 
 
-        <div>
-          <button type="submit" class="btn btn-default">Analyze</button>
-        </div>
+        <span>
+          <button type="submit" class="btn btn-primary" align="center">Analyze</button>
+        </span>
 
       </form>
     
@@ -50,10 +58,12 @@
     </div><!-- /.container -->
 
 
+    <br>
+    <br>
   <div class="container">
     <div class="starter-template">
-			<p class="lead">You need to select an option for all parameters.</p>
-			<p class="lead">Try again.</p>
+      <p class="lead">You need to select an option for all parameters.</p>
+      <p class="lead">Try again.</p>
     </div>
 
   </div><!-- /.container -->

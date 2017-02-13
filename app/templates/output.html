@@ -1,19 +1,25 @@
 {% extends "base_template.html" %}
 {% block content %}
-  <div class="container">
-      <br>
-      <br>
+
+<!--
+<br>
+<br>
+-->
+<div class="container">
 
     <div class="container">
-      <h3>Select a county in California to see the most important factors related to pediatric asthma</h3>
+      <h2>Selected options for which to see the most important factors of pediatric asthma</h2>
     </div>
 
     <div class = "container">
 
       <form  action="/output" method="GET">
-        <select class="selectpicker" name="county" id="county">
+
+          <select class="selectpicker" name="county" id="county">
           <option value="0" selected disabled><strong>County</strong></option>
+          <option data-divider="true" disabled></option>
           {% for c in counties %}
+            <!-- counties without data -->
             {% if c['County'] != "Alpine" and c['County'] != "Del Norte" and c['County'] != "Glenn" and c['County'] != "Inyo" and c['County'] != "Lassen" and c['County'] != "Mariposa" and c['County'] != "Modoc" and c['County'] != "Mono" and c['County'] != "Plumas" and c['County'] != "Sierra" and c['County'] != "Trinity" and c['County'] != "Yuba" %}
               {% if c['FIPS']==rates['FIPS'] %}
                 <option value={{ c['FIPS'] }} selected data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
@@ -29,6 +35,7 @@
 
         <select class="selectpicker" name="age" id="age">
             <option value="0" selected disabled><strong>Age</strong></option>
+            <option data-divider="true" disabled></option>
             {% if rates['Age'] == "0-4" %}
               <option value="0-4" selected>0-4 years</option>
             {% else %}
@@ -43,6 +50,7 @@
 
         <select class="selectpicker" name="gender" id="gender">
             <option value="0" selected disabled><strong>Gender</strong></option>
+            <option data-divider="true" disabled></option>
             {% if rates['Gender'] == "male" %}
                 <option value="male" selected>Male</option>
             {% else %}
@@ -53,12 +61,11 @@
             {% else %}
                 <option value="female">Female</option>
             {% endif %}
-
-            <option value="female">Female</option>
         </select> 
 
         <select class="selectpicker" name="ethnicity" id="ethnicity">
             <option value="0" selected disabled><strong>Ethnicity</strong></option>
+            <option data-divider="true" disabled></option>
             {% if rates['Ethnicity'] == "white" %}
                 <option value="white" selected>White/Caucasian</option>
             {% else %}
@@ -87,7 +94,7 @@
         </select> 
 
         <span>
-          <button type="submit" class="btn btn-default" align="center">Analyze</button>
+          <button type="submit" class="btn btn-primary" align="center">Analyze</button>
         </span>
 
       </form>
@@ -101,10 +108,147 @@
   <br>
 
   <div class="container">
-    <div class="starter-template">
-      <h3>Results for {{ rates['Gender'] }} {{ eth_name }} children with {{ rates['Age'] }} years</h3>
-			<p class="lead">According to our model, in {{ rates['County'] }} county the predicted ED visit rate (per 10,000) for pediatric asthma is {{ rates['Rate predict'] | round(2) }}, compared with the actual rate of {{ rates['Rate real'] | round(2) }}.</p>
-    </div>
+    <h2>Results for {{ rates['Gender'] }} {{ eth_name }} children with {{ rates['Age'] }} years</h2>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="starter-template">
+                <br><br>
+              <p class="lead">According to our model, in {{ rates['County'] }} county the predicted ED visit rate (per 10,000) for pediatric asthma is {{ rates['Rate predict'] | round(2) }}, compared with the actual rate of {{ rates['Rate real'] | round(2) }}.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+
+<style>
+    .toolTip {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        display: none;
+        width: auto;
+        height: auto;
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        font: 14px sans-serif;
+        padding: 5px;
+        text-align: center;
+    }
+
+    text {
+        font: 16px sans-serif;
+        font-weight: bold;
+        color: black;
+    }
+    text.value {
+        fill: white;
+    }
+
+    .bar {
+        fill: steelblue;
+        fill-opacity: .9;
+    }
+
+    .bar:hover {
+        fill: brown;
+        fill-opacity: .9;
+    }
+    .label {
+        font-size: 16px ;
+    }
+
+</style>
+
+<svg width="600" height="170"></svg>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+    data = [{label:"Real ED visit rate", value:{{ rates['Rate real'] | round(2) }}},
+            {label:"Predicted ED visit rate", value:{{ rates['Rate predict'] | round(2) }}}
+           ];
+
+    var div = d3.select("svg").append("div").attr("class", "toolTip");
+
+    var     margin = 0,
+            valueMargin = 4,
+            width = parseInt(d3.select('svg').style('width'), 10),
+            height = parseInt(d3.select('svg').style('height'), 10),
+            barHeight = (height-margin*2)* 0.9/data.length,
+            barPadding = (height-margin*2)*0.1/data.length,
+            data, bar, scale, labelWidth = 0;
+
+    max = d3.max(data, function(d) { return d.value; });
+
+    svg = d3.select('svg');
+
+    bar = svg.selectAll("g")
+            .data(data)
+            .enter()
+            .append("g");
+
+    bar.attr("class", "bar")
+            .attr("cx",0)
+            .attr("transform", function(d, i) {
+                return "translate(" + margin + "," + (i * (barHeight + barPadding) + barPadding) + ")";
+            });
+
+    bar.append("text")
+            .attr("class", "label")
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em") //vertical align middle
+            .text(function(d){
+                return d.label;
+            }).each(function() {
+        labelWidth = Math.ceil(Math.max(labelWidth, this.getBBox().width));
+    });
+
+    scale = d3.scale.linear()
+            .domain([0,     500])
+//            .domain([0,     max])
+            .range([0, width - margin*2 - labelWidth]);
+
+    bar.append("rect")
+            .attr("transform", "translate("+labelWidth+", 0)")
+            .attr("height", barHeight)
+            .attr("width", function(d){
+                return scale(d.value);
+            });
+
+    bar.append("text")
+            .attr("class", "value")
+            .attr("y", barHeight / 2)
+            .attr("dx", -valueMargin + labelWidth) //margin right
+            .attr("dy", ".35em") //vertical align middle
+            .attr("text-anchor", "end")
+            .text(function(d){
+                return (d.value);
+            })
+            .attr("x", function(d){
+                var width = this.getBBox().width;
+                return Math.max(width + valueMargin, scale(d.value));
+            });
+
+    bar
+            .on("mousemove", function(d){
+                div.style("left", d3.event.pageX+10+"px");
+                div.style("top", d3.event.pageY-25+"px");
+                div.style("display", "inline-block");
+                div.html((d.label)+"<br>"+(d.value));
+            });
+    bar
+            .on("mouseout", function(d){
+                div.style("display", "none");
+            });
+
+</script>
+
+          </div>
+      </div>
+
+      <br><br>
+      
+      
   </div><!-- /.container -->
 
     <br>
@@ -138,42 +282,78 @@
 
     <br>
 
+<style>
+    .chart div {
+      font: 14px sans-serif;
+      background-color: deepskyblue;
+      text-align: left;
+      padding: 3px;
+      margin: 1px;
+      color: black;
+    }
+</style>
+
   <div class="container">
-    <table class="table table-hover">
-        <tr>
-          <th>Factor</th>
-          <th>Percentile<br>(higher is better)</th>
-          <th>Impact Score</th>
-        </tr>
-        <tr>
-          <td>PM2.5 air quality</td>
-          <td>Better than {{ ranks['PM2.5 AQI'] | round | int }}% of measured counties</td>
-          <td>{{ impact['PM2.5 AQI'] | round(2) }}</td>
-        </tr>
-        <tr>
-            <td>Traffic pollution</td>
-            <td>Better than {{ ranks['Traffic pollution'] | round | int }}% of measured counties</td>
-            <td>{{ impact['Traffic pollution'] | round(2) }}</td>
-        </tr>
-        <tr>
-            <td>Ozone air quality</td>
-            <td>Better than {{ ranks['O3 AQI'] | round | int }}% of measured counties</td>
-            <td>{{ impact['O3 AQI'] | round(2) }}</td>
-        </tr>
-        <tr>
-            <td>Median air quality index</td>
-            <td>Better than {{ ranks['AQI Median'] | round | int }}% of measured counties</td>
-            <td>{{ impact['AQI Median'] | round(2) }}</td>
-        </tr>
-        <tr>
-            <td>Area burned by wild fires</td>
-            <td>Better than {{ ranks['Area burned'] | round | int }}% of measured counties</td>
-            <td>{{ impact['Area burned'] | round(2) }}</td>
-        </tr>
+    <table class="table table-hover sortable">
+<!--    <table class="table table-hover table-striped">-->
+        <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Percentile rank<br>(higher is better)</th>
+              <th>Impact Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PM2.5 air quality</td>
+                <td>Better than {{ ranks['PM2.5 AQI'] | round | int }}% of measured counties</td>
+                <td class="chart"><div style="width: {{ impact['PM2.5 AQI'] | round(2) }}ch">{{ impact['PM2.5 AQI'] | round(2) }}</div></td>
+<!--                <td class="chart"><div>{{ impact['PM2.5 AQI'] | round(2) }}</div></td>-->
+            </tr>
+            <tr>
+                <td>Traffic pollution</td>
+                <td>Better than {{ ranks['Traffic pollution'] | round | int }}% of measured counties</td>
+                <td class="chart"><div style="width: {{ impact['Traffic pollution'] | round(2) }}ch;">{{ impact['Traffic pollution'] | round(2) }}</div></td>
+<!--                <td class="chart"><div>{{ impact['Traffic pollution'] | round(2) }}</div></td>-->
+            </tr>
+            <tr>
+                <td>Ozone air quality</td>
+                <td>Better than {{ ranks['O3 AQI'] | round | int }}% of measured counties</td>
+                <td class="chart"><div style="width: {{ impact['O3 AQI'] | round(2) }}ch;">{{ impact['O3 AQI'] | round(2) }}</div></td>
+<!--                <td class="chart"><div>{{ impact['O3 AQI'] | round(2) }}</div></td>-->
+            </tr>
+            <tr>
+                <td>Median air quality index</td>
+                <td>Better than {{ ranks['AQI Median'] | round | int }}% of measured counties</td>
+                <td class="chart"><div style="width: {{ impact['AQI Median'] | round(2) }}ch;">{{ impact['AQI Median'] | round(2) }}</div></td>
+<!--                <td class="chart"><div>{{ impact['AQI Median'] | round(2) }}</div></td>-->
+            </tr>
+            <tr>
+                <td>Area burned by wild fires</td>
+                <td>Better than {{ ranks['Area burned'] | round | int }}% of measured counties</td>
+                <td class="chart"><div style="width: {{ impact['Area burned'] | round(2) }}ch;">{{ impact['Area burned'] | round(2) }}</div></td>
+<!--                <td class="chart"><div>{{ impact['Area burned'] | round(2) }}</div></td>-->
+            </tr>
+        </tbody>
     </table>
 
   </div><!-- /.container -->
 
+<!--
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<script>
+var x = d3.scale.linear()
+    .domain([0, 20])
+    .range([0, 100]);
+
+d3.selectAll(".chart")
+  .selectAll("div")
+  .style("width", function(d) { return d + "ch"; });
+//  .style("width", function(d) { return x(d) + "px"; });
+//  .text(function(d) { return d; });
+</script>
+-->
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>

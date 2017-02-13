@@ -18,17 +18,17 @@ body {
 }
 
 .image-bg-fluid-height {
-	background: url('../bg_1920-500.jpg') no-repeat center center scroll;
-    padding: 80px 0;
+    background: url('../bg_1920-500.jpg') no-repeat center center scroll;
+    padding: 73px 0;
 }
 
 .image-bg-fixed-height {
-	background: url('../bg_1920-500.jpg') no-repeat center center scroll;
+    background: url('../bg_1920-500.jpg') no-repeat center center scroll;
     height: 450px;
 }
 
 .img-center {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 section {

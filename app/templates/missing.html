@@ -1,6 +1,9 @@
 {% extends "base_template.html" %}
 {% block content %}
-  <div class="container">
+
+<br>
+<br>
+<div class="container">
 
     <div class="container">
       <h3>Select a county in California to see the most important factors related to pediatric asthma</h3>
@@ -9,37 +12,88 @@
     <div class = "container">
 
       <form  action="/output" method="GET">
-        <select class="selectpicker" name="county" id="county">
-          <option value="0" selected disabled>County</option>
+
+          <select class="selectpicker" name="county" id="county">
+          <option value="0" selected disabled><strong>County</strong></option>
+          <option data-divider="true" disabled></option>
           {% for c in counties %}
-              <option value={{ c['FIPS'] }} data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
+            <!-- counties without data -->
+            {% if c['County'] != "Alpine" and c['County'] != "Del Norte" and c['County'] != "Glenn" and c['County'] != "Inyo" and c['County'] != "Lassen" and c['County'] != "Mariposa" and c['County'] != "Modoc" and c['County'] != "Mono" and c['County'] != "Plumas" and c['County'] != "Sierra" and c['County'] != "Trinity" and c['County'] != "Yuba" %}
+              {% if c['County']==county_name %}
+                <option value={{ c['FIPS'] }} selected data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
+              {% else %}
+                <option value={{ c['FIPS'] }} data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
+              {% endif %}
+            {% else %}
+            <!-- disable option for counties without data -->
+              <option value={{ c['FIPS'] }} disabled> {{ c['County'] }}</option>
+            {% endif %}
           {% endfor %}
         </select> 
 
         <select class="selectpicker" name="age" id="age">
-          <option value="0" selected disabled>Age</option>
+            <option value="0" selected disabled><strong>Age</strong></option>
+            <option data-divider="true" disabled></option>
+            {% if age == "0-4" %}
+              <option value="0-4" selected>0-4 years</option>
+            {% else %}
               <option value="0-4">0-4 years</option>
+            {% endif %}
+            {% if age == "5-17" %}
+              <option value="5-17" selected>5-17 years</option>
+            {% else %}
               <option value="5-17">5-17 years</option>
+            {% endif %}
         </select> 
 
         <select class="selectpicker" name="gender" id="gender">
-          <option value="0" selected disabled>Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+            <option value="0" selected disabled><strong>Gender</strong></option>
+            <option data-divider="true" disabled></option>
+            {% if gender == "male" %}
+                <option value="male" selected>Male</option>
+            {% else %}
+                <option value="male">Male</option>
+            {% endif %}
+            {% if gender == "female" %}
+                <option value="female" selected>Female</option>
+            {% else %}
+                <option value="female">Female</option>
+            {% endif %}
         </select> 
 
         <select class="selectpicker" name="ethnicity" id="ethnicity">
-          <option value="0" selected disabled>Ethnicity</option>
-              <option value="white">White/Caucasian</option>
-              <option value="african">African-American</option>
-              <option value="asian">Asian-American/Pacific Islander</option>
-              <option value="hispanic">Hispanic</option>
-              <option value="other">Other</option>
+            <option value="0" selected disabled><strong>Ethnicity</strong></option>
+            <option data-divider="true" disabled></option>
+            {% if eth_name == "White/Caucasian" %}
+                <option value="white" selected>White/Caucasian</option>
+            {% else %}
+                <option value="white">White/Caucasian</option>
+            {% endif %}
+            {% if eth_name == "African-American" %}
+                <option value="african" selected>African-American</option>
+            {% else %}
+                <option value="african">African-American</option>
+            {% endif %}
+            {% if eth_name == "Asian-American/Pacific Islander" %}
+                <option value="asian" selected>Asian-American/Pacific Islander</option>
+            {% else %}
+                <option value="asian">Asian-American/Pacific Islander</option>
+            {% endif %}
+            {% if eth_name == "Hispanic" %}
+                <option value="hispanic" selected>Hispanic</option>
+            {% else %}
+                <option value="hispanic">Hispanic</option>
+            {% endif %}
+            {% if eth_name == "Other" %}
+                <option value="other" selected>Other</option>
+            {% else %}
+                <option value="other">Other</option>
+            {% endif %}
         </select> 
 
-        <div>
-          <button type="submit" class="btn btn-default">Analyze</button>
-        </div>
+        <span>
+          <button type="submit" class="btn btn-primary" align="center">Analyze</button>
+        </span>
 
       </form>
     
@@ -50,10 +104,12 @@
     </div><!-- /.container -->
 
 
+		<br>
+		<br>
   <div class="container">
     <div class="starter-template">
-			<p class="lead">There is not enough data for {{ gender }} {{ eth_name }} children with {{ age }} years, for the {{ county_name }} county.</p>
-			<p class="lead">Try again with different parameters.</p>
+      <p class="lead">There is not enough data in the {{ county_name }} county for {{ gender }} {{ eth_name }} children with {{ age }} years.</p>
+      <p class="lead">Try again with different parameters.</p>
     </div>
 
   </div><!-- /.container -->

@@ -41,12 +41,6 @@ def contact():
 	return render_template('contact.html')
 
 
-#@app.route('/realtime')
-#@app.route('/realtime.html')
-#def realtime():
-#	return render_template("realtime.html")
-
-
 @app.route('/')
 @app.route('/index')
 @app.route('/index.html')
@@ -89,3 +83,8 @@ def breath_output():
 		except:
 				return render_template("missing.html", counties=counties, county_name=county_name, age=age, gender=gender, eth_name=eth_name)
 
+
+@app.route('/hello')
+@app.route('/hello.html')
+def hello():
+	return render_template('hello.html')
