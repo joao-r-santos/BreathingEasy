@@ -73,7 +73,8 @@ def breath_output():
 	else:
 		try:
 			rates= getRates(fips=county_fips, age=age, gender=gender, ethnicity=ethnicity)
-			ranks= getRanks(fips=county_fips, age=age, gender=gender, ethnicity=ethnicity)
+			#ranks= getRanks(fips=county_fips, age=age, gender=gender, ethnicity=ethnicity)
+			ranks= getRanks(fips=county_fips)
 			impact= getImpact(fips=county_fips, age=age, gender=gender, ethnicity=ethnicity)
 
 			if rates != None:
