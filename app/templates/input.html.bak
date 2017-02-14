@@ -1,28 +1,80 @@
-{% extends "base_template.html" %}
+{% extends "base_homepage.html" %}
 {% block content %}
-  <div class="container">
 
+<br>
+<div class="container">
 
+<!--
     <div class="starter-template">
-      <h1>Select a county in California to see the most important factors related to pediatric asthma</h1>
+        <h1>Welcome to Breathing Easy</h1>
+        <p>Select your options below to see what are the most important factors in pediatric asthma for the subset of the child population you've selected.</p>
+        <p>You can compare with other counties and determine which factors have the highest return on reduction of pediatric asthma.</p>
+    </div>
+-->
+
+    <div class="container">
+      <h2>Select the options for which to see the most important factors of pediatric asthma</h2>
+<!--      <h3>Select a county in California to see the most important factors related to pediatric asthma</h3>-->
     </div>
 
     <div class = "container">
 
       <form  action="/output" method="GET">
-        <select class="selectpicker" onchange="location=this.options[this.selectedIndex].value;" name="county" id="county">
-          <option value="0" selected disabled>County</option>
-          {% for county_name in county_names %}
-          <option value="/output?county_name={{ county_name }}"> {{ county_name }}</option>
+
+          <select class="selectpicker" name="county" id="county">
+          <option value="0" selected disabled><strong>County</strong></option>
+          <option value="0" disabled="disabled">────────</option>
+          {% for c in counties %}
+            <!-- counties without data -->
+            {% if c['County'] != "Alpine" and c['County'] != "Del Norte" and c['County'] != "Glenn" and c['County'] != "Inyo" and c['County'] != "Lassen" and c['County'] != "Mariposa" and c['County'] != "Modoc" and c['County'] != "Mono" and c['County'] != "Plumas" and c['County'] != "Sierra" and c['County'] != "Trinity" and c['County'] != "Yuba" %}
+              <option value={{ c['FIPS'] }} data-value="{{ c['FIPS'] }}"> {{ c['County'] }}</option>
+            {% else %}
+            <!-- disable option for counties without data -->
+              <option value={{ c['FIPS'] }} disabled> {{ c['County'] }}</option>
+            {% endif %}
           {% endfor %}
         </select> 
 
+        <select class="selectpicker" name="age" id="age">
+            <option value="0" selected disabled><strong>Age</strong></option>
+            <option value="0" disabled="disabled">────────</option>
+            <option value="0-4">0-4 years</option>
+            <option value="5-17">5-17 years</option>
+        </select> 
+
+        <select class="selectpicker" name="gender" id="gender">
+            <option value="0" selected disabled><strong>Gender</strong></option>
+            <option value="0" disabled="disabled">────────</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> 
+
+        <select class="selectpicker" name="ethnicity" id="ethnicity">
+            <option value="0" selected disabled><strong>Ethnicity</strong></option>
+            <option value="0" disabled="disabled">────────</option>
+            <option value="white">White/Caucasian</option>
+            <option value="african">African-American</option>
+            <option value="asian">Asian-American/Pacific Islander</option>
+            <option value="hispanic">Hispanic</option>
+            <option value="other">Other</option>
+        </select> 
+
+        <span>
+          <button type="submit" class="btn btn-primary" align="center">Analyze</button>
+        </span>
+
       </form>
+    
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
 
+  <br>
+  <br>
+
     <div>
+
+<!--
 <p>
 <map name="california_image_map"> 
 <area href="output?county_name=Del+Norte" shape="poly" coords="12,7,10,12,11,15,13,16,16,24,17,31,22,33,27,32,31,33,31,35,33,39,37,36,37,32,34,28,33,24,36,18,34,14,36,9,40,6,42,3,36,3,30,3,21,2,15,1,13,3" alt="Del Norte County" />
@@ -149,5 +201,7 @@
 
 
     </div>
+-->
+
   </div><!-- /.container -->
 {% endblock %}

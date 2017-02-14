@@ -48,7 +48,8 @@ def contact():
 @app.route('/input.html')
 def breath_input():
 	counties= ListCounties()
-	return render_template("input.html", counties=counties)
+	#return render_template("input.html", counties=counties)
+	return render_template("input.html", counties=counties, county_name='Los Angeles', age='0-4', gender='male', ethnicity='african')
 
 
 
