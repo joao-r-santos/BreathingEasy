@@ -31,4 +31,4 @@ if __name__ == '__main__':
 	print 'ozone AQI : %f' % impact_row['O3 AQI']
 	print 'PM2.5 AQI : %f' % impact_row['PM2.5 AQI']
 	print 'Traffic pollution: %f' % impact_row['Traffic pollution']
-	print 'Area burned from wild fires: %f' % impact_row['Area burned']
+	print 'Area burned from wildfires: %f' % impact_row['Area burned']

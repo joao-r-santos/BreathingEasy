@@ -27,8 +27,8 @@ def getRanks(fips='06037', age='0-4', gender='female', ethnicity='hispanic'):
 if __name__ == '__main__':
 	ranks_row= getRanks()
 	print 'The percentage ranks of the different factors compared to the rest of the California counties are:'
-	print '                median AQI : %f' % ranks_row['AQI Median']
-	print '                 ozone AQI : %f' % ranks_row['O3 AQI']
-	print '                 PM2.5 AQI : %f' % ranks_row['PM2.5 AQI']
-	print '          Traffic pollution: %f' % ranks_row['Traffic pollution']
-	print 'Area burned from wild fires: %f' % ranks_row['Area burned']
+	print '               median AQI : %f' % ranks_row['AQI Median']
+	print '                ozone AQI : %f' % ranks_row['O3 AQI']
+	print '                PM2.5 AQI : %f' % ranks_row['PM2.5 AQI']
+	print '         Traffic pollution: %f' % ranks_row['Traffic pollution']
+	print 'Area burned from wildfires: %f' % ranks_row['Area burned']
