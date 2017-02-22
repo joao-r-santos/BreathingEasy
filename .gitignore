@@ -91,3 +91,7 @@ ENV/
 # Edit files
 *~
 .*~
+
+# Local files
+app/templates/*.bak
+app/templates/temp?.html
